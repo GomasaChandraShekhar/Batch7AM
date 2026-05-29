@@ -619,7 +619,12 @@ Git ::
 
 GitHub :: Version Control system - 
 
-
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/GomasaChandraShekhar/Batch7AM.git
+git push -u origin main
 
 
 
