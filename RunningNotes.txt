@@ -1,0 +1,625 @@
+
+
+
+Conditional Statements :: 
+
+if ---- else :: Only one condition.
+
+if(condition)
+{
+
+// true
+
+}
+else {
+
+// false
+
+}
+
+if -- else if -- two or more conditions -- 
+
+if(condition1){
+//
+}
+else if(condition2){
+//
+}
+else if(condition3){
+//
+}
+else{
+    // 
+}
+
+switch case :: depends on expression 
+
+
+switch(expression){
+
+    case expression1:
+    log();
+    break;
+
+    case expression2:
+    ////
+    break;
+
+    case expression3:
+    log();
+    break;
+
+    case expression4:
+    ////
+    break;
+
+    default:
+    /// 
+
+}
+
+
+
+Loops :: 
+
+for :: number of iteration
+
+
+for(initialization; condition; increment/decrement)
+{
+
+//
+//
+//
+
+}
+
+
+
+while :: condition :: true
+
+while(condition){
+// Statements
+
+}
+
+do-while :: true
+
+do{
+    // Statements
+}
+while(condition)
+
+for of :: Array
+
+for in :: Object/Dictionary
+
+
+String :: 
+
+1. '' ---- 'hjsvvsdhvdsahjvdsh32443453425' ---- '123456' ---- 
+2. "" ----  "dsfmfnkjsdfkjads121432432" ------ "3432432534534" ----- 
+3. `` (Backlit) ---- `dsjhfhdsfjsuf234234324` ---- `12345` --- Template Literals
+
+
+
+Array :: Multiple data of any type
+
+
+'chandra', 35, 'India', 9912127022, true
+
+name, age, country, pno
+
+const namearray = [val1, val2, val3, val4,.......]
+
+const array1 = ['chandra', 35, 'India', 9912127022, true];
+
+0, length()-1
+
+array1[index]
+
+
+
+array literal :: 
+
+const array1:(string | number)[] = ['chandra', 35, 'India', 9912127022, true];
+
+
+
+new keyword :: 
+
+const arr2 = new Array(){
+
+    'chandra', 35, 'India', 9912127022, true;
+}
+
+
+Generic Type :: 
+
+
+const empNames: Array<string> = ["john", "smith", "peter", "scott"]; // Array of strings
+
+const empIds: Array<number> = [101, 102, 103, 104]; // Array of numbers
+
+const data: Array<string | number> = ["john", "smith", 101, 102]; // Union type (string or number)
+
+const data2: Array<any> = [1, "john", true, null]; // Array allowing multiple data types
+
+// for in loop
+
+for (let index in fruits) {
+    console.log(fruits[index]);  // output: Apple Orange Banana
+}
+
+
+Object :: 
+
+behavior - properties
+
+virtual machine - 
+
+key: value pair.
+
+Object Literals
+new keyword
+
+
+const person = {
+name: 'Chandra',
+age: 35,
+city: 'Hyderabad',
+country: 'India'
+
+}
+
+
+let employee: {
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
+} = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  jobTitle: 'Web Developer'
+};
+
+class Person {
+
+    constructor(public name: string, public age: number, public city: string){
+    this.name = name;
+    this.age = age;
+    this.city = city;
+    }
+
+getName(){
+    retun this.name;
+}
+
+getAge(){
+    return this.age;
+}
+
+getCity(){
+    return this.city;
+}
+
+
+getDetails(){
+
+    log(`${this.name} : ${this.age} : ${this.city}`);
+}
+
+
+}
+
+// Creating a new instance of Person
+let person1 = new Person('Evan', 30, 'Paris');
+let person2 = new Person('Anupam', 25, 'Delhi');
+let person3 = new Person('Rathna', 34, 'Hyderabad');
+
+
+Functions :: 
+
+
+
+browser - 
+context - 
+page - 
+
+
+npx playwright test
+
+await expect(locator).toHaveTitle();
+
+Writing first test ::
+
+Locators ::
+
+Inspect the page - Document Object Model - Complete page source code - html
+
+Id :: Unique - not duplicate
+Name :: 
+class :: 
+Text :: 
+css :: 
+xpath :: 
+
+
+CSS Selector :: 
+
+1. ID attribute ::  #idattributevalue OR tagname#attributeValue
+
+id='name'
+
+#name
+
+
+2. class :: .classattributevalue  OR   tagname.classattributevalue
+
+class='form-control' ------  .form-control
+
+3. using other attributes - tagname[attribute='value']
+
+placeholder="Enter Name"
+
+input[placeholder='Enter Name']
+
+
+XPATH :: 
+1. Relative xpath :: //
+
+2. Absolute Xpath :: / 
+
+/html/body/div[4]/div[2]/div[2]/div[2]/div[2]/div[2]/div[2]/div/div[4]/div[1]/div/div/div[1]/div[1]/div/div/div/div/div[2]/div[1]/input[1]
+
+1. Relative xpath :: // - //tagname[@attribute='value']
+
+//input[@id='name']
+//input[@placeholder='Enter Name']
+
+//h1[@class='title']
+
+
+visible text :: //tagname[text()='textValue']
+
+//h5[text()='Login']
+
+//button[text()=' Login ']
+
+
+//p[text()='Forgot your password? ']
+
+//input[@class='oxd-input oxd-input--active']
+
+
+page.getByRole(button, {name: 'Login'}) ::
+
+
+textField -  
+
+enter text - fill()
+clear text from field - clear()
+capture text from field -  inputvalue()
+
+
+
+ & InnerText ::
+
+
+
+
+
+
+4 
+
+[] = 0,1,2,3
+
+
+Assertion :: Verification
+
+Hard Assertion :: failed - terminated
+
+Soft Assertion :: failed - reports status - continue execution  
+
+expect :: 
+
+expect.soft(locator).toBe....();
+
+
+Dropdown :: select
+
+Drag and drop ::
+
+await page.locator().drag(page.locator());
+
+screenshot :: 
+
+page.locator().screenshot({path: ``});
+
+
+Handling Alerts/Dialog Boxes :: 
+
+1. Simple alert :: Ok button
+2. Confirmation Alert :: Ok and Cancel
+3. Prompt Alert :: Ok and Cancel buttons and accept message
+
+Ok - accept();
+Cancel -dismiss();
+
+get alert message - message(); 
+type of alert - type();
+
+accept(message);
+
+page.on('dialog', dialog => dialog.accept());
+page.on('dialog', dialog => dialog.dismiss());
+
+dialog.message();
+dialog.type();
+
+dialog.accept(message); // message is saved
+
+dialog.cancel(message); // message is not saved
+
+
+Assert / verify ::
+
+expect.soft(locator).toBe('expectedvalue');
+
+
+Handling Web Table :: 
+
+<tbale>
+<thead> -- Header row
+    <tr> Row
+        <th/td> - Column
+<tbody> // Table body
+    <tr> // row
+        <th/td> // column
+
+
+Handling File Upload ::
+
+setInputFiles('file.pdf'); // single file
+
+setInputFiles(['file1.pdf', 'image.jpg' ]); // multiple files
+
+
+Screenshot and Visual Comparison ::
+
+// Screenshot of specific element 
+ele.screenshot({path: 'foldername/image.png'});
+
+// screenshot of page
+page.screenshot({path: 'foldername/image.png', fullpage: true});
+
+
+image_datetime.png
+
+image_+'Date.now()'+'.png' -- image_2503202612121212.png
+
+Date.now();
+
+toMatchSnopshot()
+
+Handling Page Navigation :: 
+
+textContent() - 
+
+innerText() -- 
+
+--debug
+
+Reporting ::
+
+reporter: 'html',
+reporter: 'allure-playwright',
+
+// Multiple Reports
+  reporter: [
+     ['list'],
+     ['line'],
+     ['html'],
+     ['blob'],
+     ['json', { outputFile: 'test-results.json' }],
+     ['junit', { outputFile: 'results.xml' }],
+     ["allure-playwright"],
+  ],
+
+Allure Report Integration ::
+
+Install Allure report ::
+
+npm install -D allure-playwright
+
+
+Update config.env file ::
+
+reporter: "allure-playwright",
+
+Run test -- 
+
+Now Generate allure report using npx ::
+
+npx allure generate ./allure-results
+
+Open Allure Report using npx :: 
+
+npx allure open ./allure-report
+
+
+
+playwright - locate elements :: 
+
+
+API Testing ::
+
+POST :: To Create new resource in the URI
+GET :: Retrieve data from URI - Unified Resource Identifier
+PUT
+PATCH
+DELETE
+
+
+POST :: To Create new resource in the URI
+
+uri,
+body,
+cookies
+
+const response = await request.post(uri, 
+{
+    data: {},
+    Header: {"Content-Type": "application/json"},
+    cookies: {}
+
+} );
+
+
+201 Created
+
+Page Object Model :: 
+
+class - constructor - Page Object - 
+
+playwright.config file :: 
+
+Grouping of Test Cases :: 
+
+
+ --grep Group01
+
+Login and logout
+
+PlaceOrder :: 
+
+Hooks :: 
+
+beforeEach() :: Login
+afterEach() :: Logout
+beforeAll() :: launch browser - navigate to application - Login
+afterAll() :: Logout - close browser
+
+Tagging :: 
+
+CodeGen :: record code and sve desired language
+
+
+
+Excel, Json, xml
+
+Read csv data ::
+
+npm install csv-parse
+import {parsr} from 'csv-parse/sync'
+
+const csvdata = JSON.parse(fs.readFileSync(jsonpath, 'utf-8'));
+const records = parse(csvdata, {columns: true, skip_empty_line: true})
+
+for(){
+
+}
+
+read excel data :: 
+fs :: file system :: read the file from given path.
+
+
+json :: JSON.parse();
+
+csv file ::
+
+npm install csv-parse
+
+fs.
+pasre();
+
+Excel :: 
+npm install xlsx
+workbook, worksheet
+
+Shadow DOM Elements :: 
+css :: 
+xpath :: Never use xpath.
+
+
+iframe inside Shadow dom :: 
+
+viewPort:  {width: 1600, height: 690}
+
+proxy:
+
+http://dummy.com:1332
+
+https://selectorshub.com/iframe-in-shadow-dom/
+
+SSL - Simple Socket Layer
+
+https://expired.badssl.com
+
+Cockies ::
+
+constext.addCoockies();
+
+Cucumber ::
+
+https://github.com/cucumber/cucumber-js
+
+https://cucumber.io/docs/guides/
+
+npm install @cucumber/cucumber
+
+install cucumber plugin in VSCode
+
+npx cucumber-js
+
+
+Feature: 
+    Scenario: 
+        Given User is in login page ------ Pre Condition
+        When User login to application ------ Action
+        Adn 
+        But 
+        Then User should be in dashboard page -- Post Condition
+
+hooks :: 
+
+Before :: before every scenario in a feature file
+After :: after every scenario in a feature file
+
+BeforeStep :: Before every step in a scenario
+AfterStep :: After every step in a scenario
+
+BeforeAll :: Before all scenarios in a feature file
+AfterAll :: After all scenarios in a feature file
+
+tags :: 
+
+
+npx cucumber-js --exit --tags "@Regression"
+
+npx cucumber-js --exit --tags "@Regression and @Sanity"
+
+npx cucumber-js --exit --tags "@Regression or @Sanity"
+
+npx cucumber-js --exit --tags "@Smoke" --retry 1
+
+npx cucumber-js --exit --tags "@Smoke" --parallel 2
+
+npm run cucumberRegression
+
+DataBase connectivity :: 
+
+mysql DataBase :: 
+
+Jnkins - CI/CD :: 
+
+Git ::  
+
+GitHub :: Version Control system - 
+
+
+
+
+

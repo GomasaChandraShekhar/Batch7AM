@@ -1,0 +1,45 @@
+import { test, expect } from '@playwright/test';
+import * as XLSX from 'xlsx';
+
+const excelFilepath = 'testdata/data.xlsx';
+
+const workbook = XLSX.readFile(excelFilepath);
+const sheetName = workbook.SheetNames[0];
+const worksheet = workbook.Sheets[sheetName];
+const loginData = XLSX.utils.sheet_to_json(worksheet);
+
+test.describe(`Login Test`, () => {
+
+    for (const { id, email, password, validity } of loginData) {
+
+        test(`Login Test for ${id}`, async ({ page }) => {
+            await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
+            await page.waitForTimeout(2000);
+            // await page.pause();
+
+            await page.locator('#userEmail').fill(email);
+            await page.locator('#userPassword').fill(password);
+            await page.locator('#login').click();
+
+            if (validity == 'valid') {
+                await page.waitForTimeout(2000);
+                await expect.soft(page.getByRole('button', { name: 'HOME' })).toBeVisible();
+                await expect.soft(page.getByText('Automation Practice')).toBeVisible();
+                const signOutButton = page.getByRole('button', { name: 'Sign Out' });
+                await expect.soft(signOutButton).toBeVisible();
+                await signOutButton.click();
+            }
+            else if (validity == 'invalid') {
+                const errorMessage = page.locator('div#toast-container');
+                await expect.soft(errorMessage).toBeVisible();
+                console.log(await errorMessage.innerText());
+            }
+            await page.waitForTimeout(2000);
+            await page.close();
+
+        });
+    }
+});
+
+
+

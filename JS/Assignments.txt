@@ -1,0 +1,16 @@
+
+If condition:
+1. Check if a character is uppercase.
+2. Check if a number is a multiple of 10.
+
+If else condition:
+3. Check if a person is a teenager (age between 13 and 19).
+4. Compare two numbers and print the larger one.
+5. Check if a number is positive, negative, or zero.
+6. Check if a person is eligible for a senior citizen discount (age >= 60).
+
+Switch case:
+7. Print the corresponding month name for a given month number.
+8. Perform basic arithmetic operations based on user input.
+9. Print the season based on the month number.
+

@@ -1,0 +1,603 @@
+
+Comments ::
+
+// Single Line Comments
+/*
+
+Multi Line Comments
+
+*/
+
+/**
+ * 
+ *Multi Line Comment 
+ * 
+ */
+
+
+Declaring Variable ::
+
+keyword  variablename = value;
+
+var
+
+let
+
+const
+
+let a = 10;
+
+let === keyword
+
+a ===== Variable
+
+= Assignment operator
+
+10 ===== Value Assigned
+
+var: The var keyword declares a variable with a function or global scope and allows re-declaration and updates 
+     within the same scope.
+
+let: The let keyword declares a variable with block scope, which allows updates but not re-declaration within 
+     the same block.
+
+const: The const keyword declares block-scoped variables that cannot be reassigned after their initial 
+        assignment.
+
+Scope of Variable ::
+
+Function Scope
+Global Scope
+Re-declaring Variables
+No Block Scope
+
+Function Scope :: Declared inside the function.
+
+function demo(){  
+    var a = 20;       
+    console.log(a);  
+}  
+console.log(a); //output: ReferenceError: a is not defined 
+
+
+Global Scope :: Declare a variable outside of a function, it creates a global variable that can be accessible
+                anywhere throughout the program.
+
+var global = "Hello JavaScript";  
+console.log(global);  
+
+Re-declaring Variables :: We can re-declare variables in the same scope without facing any errors, 
+                          which may lead to some unintended behavior.
+
+var name = "Gomasa";  
+var name = "Chandra";  
+console.log(name);  
+
+No Block Scope :: In JavaScript, unlike let and const, var keyword does not have block scope, which means that 
+                  when you declare a variable using var inside a block is accessible outside that block.
+
+
+JavaScript Variable Data Types
+
+Different types of data can be stored in JavaScript variables. These are the primary types:
+
+String: Strings represent text values.
+Number: The number represents numerical values.
+Boolean: True or false is represented by boolean.
+Undefined: A declared variable without a value given to it.
+Null:It indicates a purposefully empty value.
+
+Object: Key-value pairs are represented by objects.
+Array: A collection of values is represented by an array.
+
+
+Functions :: 
+
+Syntax ::
+
+function functioname(parameter1, parameter2....) {
+
+
+// statements
+
+}
+
+
+1. function 
+
+function function001(){
+
+     console.log('Hello i am function001');
+}
+
+Call function to execute:: 
+
+function001();
+
+2. function with return type
+
+function function002(){
+
+     return 'Welcome to function return type';
+}
+
+Call function to execute:: 
+
+let msg = function002();
+console.log(msg);
+
+
+Arrow function ::
+
+control statements ::
+
+1. if ===>  only condition
+
+2. else if = multiple conditions
+
+3. switch case ===> multiple conditions using an expression
+
+let day;
+
+switch(day){
+     case 'Monday' :
+          console.log('Monday');
+          break;
+     case 'Tuesday':
+          console.log('Tuesday');
+          break;
+     case 'Wednesday' :
+          console.log('Wednesday');
+          break;
+     case 'Thursday':
+     console.log('Thursday');
+          break;
+     case 'Friday' :
+          console.log('Friday');
+          break;
+     case 'Saturday':
+     console.log('Saturday');
+          break;
+     case 'Sunday' :
+          console.log('Sunday');
+          break;
+     default:
+          console.log('invalid day provide');
+
+}
+
+Operators ::
+
+1. Arithmetic Operators ::
+     Addition (+), Subtraction (-), Multiplication(*), Division(/), Modulous(%)
+
+2. Logical Operators :: true false
+     AND -  &&  - true 
+     OR - ||
+     NOT - !
+
+
+AND -  &&  -  
+
+     p1             p2             output
+     true           true           true
+     true           false          false
+     false          true           false
+     false          false          false  
+
+
+OR -  ||  -  
+
+     p1             p2             output
+     true           true           true
+     true           false          true
+     false          true           true
+     false          false          false  
+
+NOT - !
+
+     !true --- false
+     !false --- true
+
+
+3. Comparison Operators ::
+
+== (Equal to)
+!= (Not equal to)
+> (Greater than)
+< (Less than)
+>= (Greater than or equal to)
+<= (Less than or equal to)
+=== (Strictly equal to) ------ checks the value and data type of the variable are equal or not.
+!== (Strictly not equal to) -- compare the inequality of two operands and types.
+
+4. Ternary Operator (?) :: It is also known as a conditional operator.
+
+syntax ::  let output = value1 == value2 ? "message1" : "message2";
+
+const age = 10;  
+const status = age >= 18 ? "Adult": "Minor";  
+console.log(status); 
+
+Loops :: 
+
+1. for Loop :: 
+2. while Loop :: 
+3. do-while Loop :: 
+4. for…of Loop ::
+5. for…in Loop ::
+
+for loop ::
+
+syntax :: 
+
+for(initialization; condition; increment/decrement){  
+   //code  
+}  
+
+for(let i= 1; i<=5; i++){  
+    console.log(i);  
+}  
+
+while Loop ::
+
+while(condition){  
+    //code block to be executed  
+} 
+
+let a = 0;  
+while(a <= 3){  
+    console.log("Welcome");  
+    a++;  
+}  
+
+do-while Loop ::
+
+do{  
+//code to execute  
+}
+while(condition)  
+ 
+Example
+let p = 1;  
+let q = 1;  
+do{  
+    pp = p + q;  
+    console.log(p);  
+    q++;  
+}while(q<5) 
+
+for…of Loop ::
+
+let sname = 'gomasa';
+
+
+
+Arrow Function in JavaScript ::
+
+(parameters) => {//code to be executed} 
+
+Parameter: The parameters the functions take are similar to the regular function expressions.
+=>: This is the fat arrow, which is used to separate parameters from the function body.
+Function body: The code that the function executes is also similar to the regular function expressions.
+
+const sum = (x, y) => x + y;  
+console.log(sum (5,7));  
+
+//simple program using arrow function without parameters  
+const demo = () => {  
+    console.log("Hello, Welcome to Tpoint Tech");  
+}  
+demo();  
+
+//Simple program using arrow function with single parameter  
+const greet = name => "Hello, " + name;  
+console.log(greet("Rohit"));  
+
+//Simple program using arrow functions with multiple parameters  
+const demo = (a, b , c) => {  
+    console.log(a - b - c);  
+}  
+demo(10, 2, 5);  
+
+
+Async Arrow Function
+In JavaScript, you can make the arrow function asynchronous by using the async keyword before the parameter list.
+
+const fetchData = async () => {  
+  try {  
+    const response = await fetch('https://rickandmortyapi.com/api/character');  
+    const data = await response.json();  
+    console.log(data);  
+    return data  
+  } catch (error) {  
+    console.error('Error fetching data:', error);  
+  }  
+};  
+fetchData();  
+
+
+
+
+Array :: Array in javascript is a collection to store multiple data of any type.
+
+Syntax
+
+const array_name = [item1, item2,…..]; 
+
+Data stored in an array on the basis of index.
+Index starts with 0.
+size/lenght of the array :: 5
+first element index is 0, last element index is (lenght-1).
+
+How to access the elements of an array :: By using index.
+
+Example
+const age = [20, 22, 21, 10, 12];  
+console.log(age);  
+
+Output:: 
+
+[ 20, 22, 21, 10, 12]
+
+Ways to create array::
+
+There are 3 ways to create an array in JavaScript. Such as:
+
+Array Literal
+Using new keyword
+Array Constructor
+
+Array Literal :: 
+
+An array literal is a list of zero or more expressions, each of which represents an array element, 
+enclosed in square brackets([]).
+
+Syntax
+
+var arrayName=[value1, value2.....valuen];    
+
+Example ::
+
+let country = [ "India", "Australia", "England" ];  
+for (let i = 0; i<country.length; i++ ){  
+console.log( country[i]);  
+}  
+
+Output:
+
+India
+Australia
+England
+
+Using a new keyword ::
+
+Syntax
+
+var array_name = new Array();  
+
+Example ::
+
+let num;  
+let country = new Array ();  
+country[0] = "Japan";  
+country[1] = "Spain";  
+country[2] = "Germany";  
+for ( num = 0; num<country.length; num++ )  
+{  
+console.log( country[num]);  
+}  
+
+Output:
+
+Japan
+Spain
+Germany
+
+Array Constructor :: 
+
+let employee = new Array("Rohit", "Vivek", "John"); 
+
+Example ::
+
+let employee = new Array("Rohit", "Vivek", "John");    
+for (let i=0;i<employee.length;i++){      
+console.log(employee[i]);      
+};    
+
+Output:
+
+Rohit
+Vivek
+John
+
+Array Methods ::
+
+push(element) ::  Adds an element to an array at the end and returns the new lenght of array.
+pop() :: removes and return the last element of an array.
+concat() :: method is utilized to combine two or more arrays.
+shift() :: removes and return the first element of an array.
+unshift() :: add the element at the beginning of an array.
+
+const arr1 = [1, 2];  
+const arr2 = [3, 4];  
+console.log(arr1.concat(arr2)); 
+
+fill() :: returns an array by filling it with the given range with the specified value.
+
+Example
+const myArray = new Array(5).fill(0);  
+console.log(myArray);  
+
+includes() :: checks whether an array contains a specified element or not and then returns a boolean value.
+
+Example
+const myName = ['John', 'Shiv', 'Ankit'];  
+console.log(myName.includes('Shiv'));  
+
+indexOf() :: checks the first occurrence of the given value and returns the position of that value.
+
+Example
+const myFruits = ['apple', 'cherry', 'banana'];  
+console.log(myFruits.indexOf('cherry')); 
+
+isArray() :: used to know whether a provided value is an array or not. It returns a Boolean value.
+
+Example
+const myFruits = ['apple', 'banana', 'cherry'];  
+console.log(Array.isArray(myFruits)); 
+
+join() :: used to join the elements of an array into a string.
+
+Example
+const words = ['Hello', 'world', '!'];  
+const sentence = words.join(' ');  
+console.log(sentence);
+
+lastIndexOf() :: search the last occurrence of a given element and returns the index of that element.
+
+Example
+const colors = ['red', 'blue', 'green', 'blue', 'yellow'];  
+console.log(colors.lastIndexOf('blue')); 
+
+map() :: used to create a new array by executing a given callback function on each element.
+
+Example
+let myNumbers = [1, 2, 3, 4, 5];  
+console.log(myNumbers.map(num => num * 2));  
+
+reverse() :: useed to reverse the elements of an array.
+
+Example
+const myArray = [ 'Apple', 'Banana', 'Orange', 'Grape' ];  
+myArray.reverse();  
+console.log(myArray); 
+
+slice() :: useded to get a portion of the array.
+
+Example
+const myFruits =  ['apple', 'banana', 'orange', 'grape', 'kiwi'];  
+const result = myFruits.slice(0, 3);  
+console.log(result); 
+
+sort() method in the array is utilized to sort an array alphabetically.
+
+Example
+let myArray = ["ReactJS", "Python", "MySQL"];  
+console.log(myArray.sort());  
+
+splice() method in an array is utilized to remove the elements of an array.
+
+Example
+let myFruits = ["Apple", "Banana", "Cherry", "Date"];  
+let removedElement = myFruits.splice(2, 1);  
+console.log(myFruits);  
+console.log(removedElement);  
+
+unshift() Method:
+The unshift() method in JavaScript is utilized to insert elements at the beginning.
+
+Example
+const myFruits = ["banana", "orange"];  
+myFruits.unshift("cherry", "apple");  
+console.log(myFruits);  
+
+
+
+
+Object :: A collection used to store values based on key:value pairs.
+
+Syntax of Object in JavaScript
+
+const myObject = {  
+  key1: value1,  
+  key2: value2,  
+  // more key-value pairs...  
+}; 
+
+Creating Objects::
+
+Using an Object Literal
+Using new 
+
+Using an Object Literal ::
+
+let person = {  
+    name: 'Harsh',  
+    age: 30,  
+    city: 'Ghaziabad'  
+}; 
+
+Using new keyword ::
+
+function Person(name, age, city) {  
+    this.name = name;  
+    this.age = age;  
+    this.city = city;  
+}  
+// Creating a new instance of Person  
+let person1 = new Person('Evan', 30, 'Paris');  
+let person2 = new Person('Anupam', 25, 'Delhi');  
+
+
+Destructuring :: Unpacking the elements of an array or Object for easy accessing.
+
+Array Destructuring ::
+
+Object Desctructuring :: 
+
+Template Literals :: Declared insde back lit (``).
+
+let sname = "";
+
+let sCountry = '';
+
+Example :: let myName = `Chandra Shekhar`;
+
+
+Synchronous :: 
+
+Execution Flow: Code is executed line by line, in a strict, sequential order.
+
+Blocking Nature: Each operation must complete before the next one can begin. If a task takes a 
+                 long time, it will "block" the entire program, making the application unresponsive.
+
+Simplicity: It is generally easier to write, read, and debug due to its predictable, linear flow.
+
+
+
+Asynchronous :: 
+
+Execution Flow: Allows multiple tasks to run concurrently using Web API requests.
+
+Non-Blocking Nature: The program remains responsive. A time-consuming operation runs in the 
+                     background, and the program is notified via a callback or promise when the 
+                     result is ready.
+
+
+JavaScript Promises :: 
+
+A promise in JavaScript is an object that is used to represent the eventual completion or failure 
+of an asynchronous operation. 
+
+With the help of Promise in JavaScript, users can handle asynchronous operations in a more 
+manageable and readable manner.
+
+States of Promise :: 
+
+Pending: It is the initial phase, which represents that the asynchronous operations are still in 
+          progress.
+
+Fulfilled: It indicates that the asynchronous operation has been completed successfully.
+
+Rejected: It indicates that the operation has failed.
+
+async/await: Used with function declaration to implement waiting for
+ each statement to complete the execution.
+
+Async/Await is used to write asynchronous code in a clean, synchronous-like manner, making it easier
+ to read, understand, and maintain while working with promises.
+
+async functions always return a Promise.
+await pauses execution until the Promise is resolved or rejected.
+
