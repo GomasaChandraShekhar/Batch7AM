@@ -627,4 +627,6 @@ git remote add origin https://github.com/GomasaChandraShekhar/Batch7AM.git
 git push -u origin main
 
 
+Jenkins ::
 
+java -jar jenkins.war -httpPort=9090
