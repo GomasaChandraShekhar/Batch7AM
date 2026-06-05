@@ -4,7 +4,7 @@ import { PageObjectManager } from '../pages/PageObjectManager';
 
 let pageObjectManager;
 let orderId;
-const jsonFilePath = 'testdata/PlaceOrder.json';
+const jsonFilePath = 'Batch7AM/testdata/PlaceOrder.json';
 const loginData = JSON.parse( fs.readFileSync( jsonFilePath, 'utf-8' ) );
 
 for ( const { prodName, email, password, url } of loginData ) {

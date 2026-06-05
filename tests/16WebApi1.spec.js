@@ -1,5 +1,5 @@
 import { test, expect, request } from '@playwright/test';
-import { ApiUtils } from './utils/APiUtils';
+import { ApiUtils } from '../utils/ApiUtils';
 
 const loginPayload = { userEmail: "gomasachandrashekhar@gmail.com", userPassword: "Gomasa@1988" };
 const orderPalyload = { orders: [ { country: "India", productOrderedId: "6960ea76c941646b7a8b3dd5" } ] };
@@ -12,10 +12,6 @@ test.beforeAll( "API Test valid credentials", async () => {
     response = await apiUtils.createOrder( orderPalyload );
 
 } );
-
-
-
-
 
 test( "Place Order", async ( { page } ) => {
 
